@@ -15,7 +15,7 @@ RUN corepack enable
 RUN apk add --no-cache python3 alpine-sdk
 
 # Use BuildKit cache mount for pnpm store
-RUN --mount=type=cache,id=s/${RAILWAY_SERVICE_ID}-pnpm-store,target=/pnpm/store \
+RUN --mount=type=cache,id=s/1e277427-c36c-4c2c-9901-bdc1450511a2-pnpm-store,target=/pnpm/store \
     pnpm install --prod --frozen-lockfile
 
 RUN pnpm deploy --filter=@imput/cobalt-api --prod /prod/api
