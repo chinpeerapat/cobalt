@@ -6,7 +6,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 # Build stage
 FROM base AS build
 # Declare Railway-provided service ID for cache mounts
-ARG RAILWAY_SERVICE_ID
+ARG RAILWAY_SERVICE_ID=1e277427-c36c-4c2c-9901-bdc1450511a2
 
 WORKDIR /app
 COPY . /app
